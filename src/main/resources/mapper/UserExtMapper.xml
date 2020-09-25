@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.weit.tables.dao.UserExtMapper">
+
+    <insert id="addAll"  parameterType="cn.weit.tables.model.BaseInfo">
+        insert into id_t_user_ext (id,
+        <foreach collection="keys" item="key" separator="," open="" close="">
+        #{key}
+        </foreach>
+        )
+        values (#{baseInfo.id,jdbcType=BIGINT},
+        <foreach collection="values" item="value" separator="," open="" close="">
+            #{value}
+        </foreach>
+        )
+    </insert>
+</mapper>
