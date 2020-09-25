@@ -43,7 +43,7 @@ public class FieldServiceImpl implements FieldService {
 		String tableName = "id_t_user_ext";
 		try {
 			List<ColumnInfo> newFieldList = Lists.newArrayList();
-			int exist = tableMapper.findTableCountByTableName(tableName);
+			int exist = tableMapper.isTableExist(tableName);
 			if (exist == 0) {
 				// 表不存在，需要整理建表的字段
 				newFieldList.addAll(constructFieldByModel());

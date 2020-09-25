@@ -5,7 +5,6 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Param;
 
 import cn.weit.tables.model.BaseInfo;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -17,7 +16,7 @@ import org.springframework.stereotype.Repository;
  * @since 2020-09-25
  */
 @Repository
-public interface UserExtMapper extends BaseMapper<BaseInfo> {
+public interface UserExtMapper  {
 
 	int addAll(@Param("baseInfo") BaseInfo baseInfo, @Param("keys") List keys, @Param("values") List values);
 

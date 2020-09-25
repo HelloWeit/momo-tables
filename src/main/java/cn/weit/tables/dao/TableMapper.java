@@ -25,7 +25,8 @@ public interface TableMapper {
 	 * @param tableName 表名
 	 * @return 存在返回1，不存在返回0
 	 */
-	int findTableCountByTableName(@Param("tableName") String tableName);
+	int isTableExist(@Param("tableName") String tableName);
+
 
 	/**
 	 * 获取已知表结构

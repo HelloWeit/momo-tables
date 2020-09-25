@@ -5,7 +5,7 @@
     <insert id="addAll"  parameterType="cn.weit.tables.model.BaseInfo">
         insert into id_t_user_ext (id,
         <foreach collection="keys" item="key" separator="," open="" close="">
-        #{key}
+        ${key}
         </foreach>
         )
         values (#{baseInfo.id,jdbcType=BIGINT},
